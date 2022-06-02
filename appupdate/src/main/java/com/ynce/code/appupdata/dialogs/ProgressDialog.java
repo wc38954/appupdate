@@ -56,7 +56,7 @@ public class ProgressDialog extends XBaseDialog {
             //将属性设置给窗体
             dialogWindow.setAttributes(lp);
         }
-        setCancelable(false);
+        setCancelable(true);
         pbDownload = view.findViewById(R.id.pb_download);
         pbRotation = view.findViewById(R.id.pb_rotation);
         tvProgress = view.findViewById(R.id.tv_progress);
