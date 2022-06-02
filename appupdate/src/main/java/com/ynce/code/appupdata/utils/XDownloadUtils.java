@@ -1,7 +1,6 @@
 package com.ynce.code.appupdata.utils;
 
 import android.content.Context;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.ynce.code.appupdata.dialogs.ProgressDialog;
@@ -155,7 +154,7 @@ public class XDownloadUtils {
                         if (total>0 && file.length() == total){
                             listener.onDownloadSuccess(file);
                         } else {
-                            Toast.makeText(context, "下载文件错误", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "下载文件错误" + res, Toast.LENGTH_SHORT).show();
                         }
                     });
                 } catch (Exception e) {

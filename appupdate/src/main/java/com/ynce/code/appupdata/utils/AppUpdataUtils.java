@@ -10,12 +10,7 @@ import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.core.content.FileProvider;
-import androidx.lifecycle.Lifecycle;
-
-import com.ynce.code.appupdata.dialogs.ProgressDialog;
-import com.ynce.code.appupdata.dialogs.UpDateDialog;
 
 import java.io.File;
 
