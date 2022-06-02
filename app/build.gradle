@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.ynce.code.update"
-        minSdk 17
+        minSdk 16
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -37,3 +37,17 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation project(':appupdate')
 }
+
+//引入:
+//repositories {
+//    maven { url 'https://www.jitpack.io' }
+//}
+//implementation 'com.github.wc38954:appupdate:1.0.0'
+//
+//
+//使用方法:
+//new AppUpdataUtils.Builder(context,url)//apk下载地址
+//        .onContent("有新版本APP下载")//提示内容
+//        .onShowProgress(false)//是否显示下载进度条
+//        .onForced(false)//是否强制更新
+//        .build();
