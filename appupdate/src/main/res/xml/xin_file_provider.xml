@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- path是指子目录 -->
+    <!-- name属性相当于这些路径的别名，通过name可以获取到相对应的路径-->
+    <external-path
+        name="external_files"
+        path="Android/data/com.ynce.mt.standard/files/apk" />
+    <external-files-path
+        name="images_pictures"
+        path="Pictures" />
+    <external-files-path
+        name="images_dcim"
+        path="DCIM" />
+    <cache-path
+        name="luban"
+        path="luban_disk_cache" />
+    <external-files-path
+        name="cache"
+        path="cache" />
+    <root-path
+        name="camera_photos"
+        path="" />
+</paths>

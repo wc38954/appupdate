@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Androidproject/mysdk/update/app/src/main/res/layout/activity_main.xml" value="0.18489583333333334" />
+        <entry key="..\:/Androidproject/mysdk/update/appupdate/src/main/res/drawable/btn_round_5dp.xml" value="0.193" />
+        <entry key="..\:/Androidproject/mysdk/update/appupdate/src/main/res/drawable/btn_round_5dp_grey.xml" value="0.193" />
+        <entry key="..\:/Androidproject/mysdk/update/appupdate/src/main/res/drawable/btn_round_5dp_write.xml" value="0.193" />
+        <entry key="..\:/Androidproject/mysdk/update/appupdate/src/main/res/layout/dialog_x_update.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Embedded JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
