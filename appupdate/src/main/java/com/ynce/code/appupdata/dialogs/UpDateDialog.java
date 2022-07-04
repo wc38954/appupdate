@@ -1,8 +1,11 @@
 package com.ynce.code.appupdata.dialogs;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -11,6 +14,10 @@ import androidx.lifecycle.Lifecycle;
 
 import com.ynce.code.appupdata.R;
 import com.ynce.code.appupdata.utils.AppUpdataUtils;
+
+import me.jessyan.autosize.AutoSizeConfig;
+import me.jessyan.autosize.onAdaptListener;
+import me.jessyan.autosize.utils.ScreenUtils;
 
 public class UpDateDialog extends XBaseDialog {
     private final Builder builder;
@@ -22,12 +29,33 @@ public class UpDateDialog extends XBaseDialog {
     private UpDateDialog(@NonNull Context context ,Lifecycle lifecycle, @NonNull Builder builder) {
         super(context, lifecycle);
         this.builder = builder;
+        //屏幕适配监听器
+        AutoSizeConfig.getInstance().setOnAdaptListener(new onAdaptListener() {
+            @Override
+            public void onAdaptBefore(Object target, Activity activity) {
+                AutoSizeConfig.getInstance().setScreenWidth(ScreenUtils.getScreenSize(activity)[0]);
+                AutoSizeConfig.getInstance().setScreenHeight(ScreenUtils.getScreenSize(activity)[1]);
+                //根据屏幕方向，设置适配基准
+                if (activity.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                    //设置横屏基准
+                    AutoSizeConfig.getInstance()
+                            .setDesignWidthInDp(640);
+                } else {
+                    //设置竖屏基准
+                    AutoSizeConfig.getInstance()
+                            .setDesignWidthInDp(320);
+                }
+            }
+            @Override
+            public void onAdaptAfter(Object target, Activity activity) {}
+        });
         updataUtils = new AppUpdataUtils(context);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         view = View.inflate(context, R.layout.dialog_x_update, null);
         setContentView(view);
         tvContent = view.findViewById(R.id.tv_content);

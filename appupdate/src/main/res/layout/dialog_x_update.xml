@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="#00FFFFFF"
+    app:cardElevation="0dp">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="255dp"
+            android:layout_height="210dp"
             android:src="@mipmap/ic_update"
             android:scaleType="fitXY"
             android:layout_gravity="center" />
         <FrameLayout
             android:background="@drawable/btn_round_5dp_write"
-            android:layout_width="300dp"
-            android:layout_height="150dp"/>
+            android:layout_width="271dp"
+            android:layout_height="130dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="40dp"
         android:layout_gravity="center"
         android:orientation="vertical">
 
@@ -32,21 +35,21 @@
             android:layout_gravity="center"
             android:gravity="center">
             <ImageView
-                android:layout_width="19dp"
-                android:layout_height="9dp"
+                android:layout_width="16dp"
+                android:layout_height="8dp"
                 android:src="@mipmap/ic_left"
                 android:scaleType="fitXY" />
             <TextView
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="新版本升级"
                 android:textStyle="bold"
                 android:textColor="#333333"
-                android:textSize="16sp"/>
+                android:textSize="15dp"/>
             <ImageView
-                android:layout_width="19dp"
-                android:layout_height="9dp"
+                android:layout_width="16dp"
+                android:layout_height="8dp"
                 android:src="@mipmap/ic_right"
                 android:scaleType="fitXY" />
         </LinearLayout>
@@ -54,34 +57,34 @@
             android:id="@+id/tv_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
             android:maxLines="5"
             android:ellipsize="end"
             android:textColor="#999999"
-            android:textSize="14sp" />
+            android:textSize="13dp" />
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="38dp"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center">
 
         <TextView
             android:id="@+id/tv_negative"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@drawable/btn_round_5dp_grey"
             android:gravity="center"
-            android:minWidth="120dp"
+            android:minWidth="108dp"
             android:text="之后再说"
             android:textColor="#C2C2C2"
-            android:textSize="14sp"/>
+            android:textSize="13dp"/>
 
         <TextView
             android:id="@+id/tv_positive"
@@ -89,12 +92,10 @@
             android:layout_height="match_parent"
             android:background="@drawable/btn_round_5dp"
             android:gravity="center"
-            android:minWidth="120dp"
+            android:minWidth="108dp"
             android:text="马上更新"
             android:textStyle="bold"
             android:textColor="#333333"
-            android:textSize="14sp" />
-
+            android:textSize="13dp" />
     </LinearLayout>
-
-</FrameLayout>
+</androidx.cardview.widget.CardView>

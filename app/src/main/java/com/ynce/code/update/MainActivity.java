@@ -7,7 +7,6 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.ynce.code.appupdata.dialogs.UpDateDialog;
-import com.ynce.code.appupdata.utils.AppUpdataUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         //"http://47.106.9.55:80/photo/app-release.apk"
         tvHello.setOnClickListener(view -> {
             if (upDateDialog == null){
-                upDateDialog =  new UpDateDialog.Builder(this,"http://47.106.9.55:80/photo/app-release.apk")//app下载地址
+                upDateDialog =  new UpDateDialog.Builder(this,"http://47.106.9.55:80/photo/ajyj_1.0.2+3 (1).apk")//app下载地址
                         .onContent("有新版本APP下载")//提示
                         .onShowProgress(true)//是否显示下载进度条
                         .onForced(false)//是否强制更新
