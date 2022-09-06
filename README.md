@@ -5,7 +5,7 @@
     repositories {
         maven { url 'https://www.jitpack.io' }
     }
-    implementation 'com.github.wc38954:appupdate:1.0.2'</code></pre>
+    implementation 'com.github.wc38954:appupdate:1.0.4'</code></pre>
 </pre>
 <h2>使用方法</h2>
 <pre><code class="lang-java">
